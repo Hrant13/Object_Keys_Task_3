@@ -7,12 +7,12 @@ const obj = {
   };
 
 let newObj = {};
-function changeKeyValue(json){ 
-  for(let key in json){
-    if(typeof json[key] === "object") {
-        changeKeyValue(json[key])
+function changeKeyValue(param){ 
+  for(let key in param){
+    if(typeof param[key] === "object") {
+        changeKeyValue(param[key])
     }else {
-      newObj[json[key]] = key;      
+      newObj[param[key]] = key;      
     }
   }
  }
